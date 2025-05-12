@@ -1,4 +1,4 @@
-export const BASE_URL = "https://financesmart.vercel.app/";
+export const BASE_URL = "https://financesmart.onrender.com";
 
 //utils/apiPaths.js
 export const API_PATHS = {
