@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://financesmart.vercel.app/";
 
 //utils/apiPaths.js
 export const API_PATHS = {
