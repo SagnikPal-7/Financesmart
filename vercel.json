@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "frontend/expense-tracker/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "frontend/expense-tracker/dist"
+      }
+    }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
