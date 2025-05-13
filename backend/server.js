@@ -13,20 +13,22 @@ const app = express();
 //Middleware to handle CORS
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "*",
+    origin: ["https://financesmart-bc8j.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
-
 app.use("/uploads", (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", process.env.CLIENT_URL || "*");
-  res.header("Access-Control-Allow-Methods", "GET");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://financesmart-bc8j.vercel.app"
+  );
+  res.setHeader("Access-Control-Allow-Methods", "GET");
   next();
 });
 
-// Serve static images
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 app.use(express.json());
 
 connectDB();
