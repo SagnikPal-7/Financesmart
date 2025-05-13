@@ -19,6 +19,14 @@ app.use(
   })
 );
 
+app.use("/uploads", (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", process.env.CLIENT_URL || "*");
+  res.header("Access-Control-Allow-Methods", "GET");
+  next();
+});
+
+// Serve static images
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
 
 connectDB();
