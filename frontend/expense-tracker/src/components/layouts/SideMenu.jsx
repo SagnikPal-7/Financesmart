@@ -32,6 +32,7 @@ const SideMenu = ({ activeMenu }) => {
           <img
             src={user?.profileImageUrl || ""}
             alt="Profile Image"
+            crossOrigin="anonymous"
             className="w-16 h-16 sm:w-20 sm:h-20 bg-slate-400 rounded-full"
           />
         ) : (
