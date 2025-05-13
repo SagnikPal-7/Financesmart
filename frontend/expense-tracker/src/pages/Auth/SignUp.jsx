@@ -90,22 +90,24 @@ const SignUp = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 ">
-            <Input
-              value={fullName}
-              onChange={({ target }) => setFullName(target.value)}
-              label="Full Name"
-              placeholder="John"
-              type="text"
-            />
-
-            <Input
-              value={email}
-              onChange={({ target }) => setEmail(target.value)}
-              label="Email Address"
-              placeholder="john@example.com"
-              type="text"
-            />
-
+            <div className="w-full">
+              <Input
+                value={fullName}
+                onChange={({ target }) => setFullName(target.value)}
+                label="Full Name"
+                placeholder="John"
+                type="text"
+              />
+            </div>
+            <div className="w-full">
+              <Input
+                value={email}
+                onChange={({ target }) => setEmail(target.value)}
+                label="Email Address"
+                placeholder="john@example.com"
+                type="text"
+              />
+            </div>
             <div className="col-span-2">
               <Input
                 value={password}

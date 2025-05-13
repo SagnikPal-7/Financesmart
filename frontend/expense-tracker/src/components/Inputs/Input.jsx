@@ -9,10 +9,10 @@ const Input = ({ value, onChange, placeholder, label, type }) => {
   };
 
   return (
-    <div>
-      <label className="text-[13px] text-slate-800">{label}</label>
+    <div className="w-full">
+      <label className="block text-[13px] text-slate-800 mb-1">{label}</label>
 
-      <div className="input-box">
+      <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 bg-white">
         <input
           type={
             type == "password" ? (showPassword ? "text" : "password") : type
